@@ -1,5 +1,3 @@
-#This code gen
-
 import json
 import random
 
@@ -26,12 +24,10 @@ def generate_ram_favorable_dataset(m, n, dominant_ratio=0.15):
     supply = [random.randint(10, 40) for _ in range(m)]
     total_supply = sum(supply)
 
-    # demand scale
     demand_raw = [random.randint(10, 40) for _ in range(n)]
     scale = total_supply / sum(demand_raw)
     demand = [max(1, int(round(d * scale))) for d in demand_raw]
 
-    # fix rounding
     diff = total_supply - sum(demand)
     idx = 0
     while diff != 0:
@@ -57,8 +53,7 @@ def save_json(filename, data):
 
 if __name__ == "__main__":
     random.seed(42)
-
-    dataset = generate_ram_favorable_dataset(m=200, n=200, dominant_ratio=0.15)
+    dataset = generate_ram_favorable_dataset(m=115, n=265, dominant_ratio=0.35)
     save_json("ram_favorable_dataset.json", dataset)
     print("Saved: ram_favorable_dataset.json")
     print("Dominant columns:", dataset["dominant_cols"])

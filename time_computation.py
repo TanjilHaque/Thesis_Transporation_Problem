@@ -18,7 +18,8 @@ def load_json_data(file_path):
 
 def main():
     # Load JSON data
-    cost, supply, demand = load_json_data("ram_favorable_dataset.json")
+    #example1_from_reference_thesis_3x4
+    cost, supply, demand = load_json_data("example10_works.json")
 
     # --- VOGEL'S METHOD ---
     trans_vam = Transportation(cost, supply, demand)
