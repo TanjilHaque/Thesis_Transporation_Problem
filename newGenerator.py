@@ -1,7 +1,7 @@
 import json
 import random
 
-def generate_ram_favorable_dataset(m, n, dominant_ratio=0.15):
+def generate_ram_favorable_dataset(m, n, dominant_ratio=0.85):
     # Choose dominant columns (15% of total)
     k = max(1, int(n * dominant_ratio))
     dominant_cols = random.sample(range(n), k)
@@ -53,7 +53,7 @@ def save_json(filename, data):
 
 if __name__ == "__main__":
     random.seed(42)
-    dataset = generate_ram_favorable_dataset(m=115, n=265, dominant_ratio=0.35)
-    save_json("ram_favorable_dataset.json", dataset)
-    print("Saved: ram_favorable_dataset.json")
+    dataset = generate_ram_favorable_dataset(m=300, n=300, dominant_ratio=0.85)
+    save_json("superior_ram_dataset.json", dataset)
+    print("Saved: superior_ram_dataset.json")
     print("Dominant columns:", dataset["dominant_cols"])

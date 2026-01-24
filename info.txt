@@ -1,0 +1,8 @@
+the 300x300 data set doesn't works even after 0.85 dominant ratio is that
+ram takes so much time to get to the IBFS that it just cannot be fast
+
+In large transportation problems, initial solution construction time
+dominates total runtime. Although RAM yields better initial solutions
+and fewer MODI iterations, its higher computational overhead makes 
+VAM + MODI faster overall, so RAM + MODI cannot be guaranteed superior 
+in large-scale cases. (by large we mean m or n greater than 200)

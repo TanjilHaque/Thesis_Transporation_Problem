@@ -19,7 +19,7 @@ def load_json_data(file_path):
 
 def main():
     # Load JSON data
-    cost, supply, demand = load_json_data("ram_favorable_dataset.json")
+    cost, supply, demand = load_json_data("works3x4.json")
 
     print("="*60)
     print("TIME COMPARISON: VAM+MODI vs RAM+MODI")
