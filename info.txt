@@ -1,8 +1,13 @@
-the 300x300 data set doesn't works even after 0.85 dominant ratio is that
-ram takes so much time to get to the IBFS that it just cannot be fast
+For very large transportation problems (𝑚 or 𝑛 > 200), 
 
-In large transportation problems, initial solution construction time
-dominates total runtime. Although RAM yields better initial solutions
-and fewer MODI iterations, its higher computational overhead makes 
-VAM + MODI faster overall, so RAM + MODI cannot be guaranteed superior 
-in large-scale cases. (by large we mean m or n greater than 200)
+the 300×300 dataset performs poorly even with a dominant ratio of 0.85.
+
+Russell’s Approximation Method (RAM) takes excessive time to construct the Initial Basic Feasible Solution (IBFS).
+
+As problem size increases, initial solution construction time dominates total runtime.
+
+Although RAM often yields better initial solutions and fewer MODI iterations, its computational overhead is high.
+
+As a result, VAM + MODI is generally faster overall for large-scale problems.
+
+Therefore, RAM + MODI cannot be guaranteed to be superior in large transportation problems.

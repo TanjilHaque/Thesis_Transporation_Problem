@@ -71,7 +71,7 @@ def ram_with_modi(cost, supply, demand):
 
 
 def main():
-    cost, supply, demand = load_json_data("ram_favorable_dataset.json")
+    cost, supply, demand = load_json_data("works84x94.json")
 
     # VAM + MODI timing
     vam_time, vam_modi_time, vam_total = vam_with_modi(cost, supply, demand)
